@@ -1,0 +1,15 @@
+# .NET
+bin/
+obj/
+*.db
+*.db-shm
+*.db-wal
+
+# Python
+__pycache__/
+*.pyc
+.env
+.vscode/
+
+# Docker
+.dockerignore
