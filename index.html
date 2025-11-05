@@ -1,38 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Docker Compose Lab</title>
+    <title>Docker Compose Lab 2</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
-        .success { background-color: #d4edda; color: #155724; }
-        .info { background-color: #d1ecf1; color: #0c5460; }
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .status { 
+            padding: 15px; 
+            margin: 15px 0; 
+            border-radius: 5px;
+            border-left: 5px solid;
+        }
+        .success { 
+            background-color: #d4edda; 
+            color: #155724;
+            border-left-color: #28a745;
+        }
+        .info { 
+            background-color: #d1ecf1; 
+            color: #0c5460;
+            border-left-color: #17a2b8;
+        }
+        .warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border-left-color: #ffc107;
+        }
+        ul {
+            line-height: 1.6;
+        }
+        footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🚀 Docker Compose Lab #2</h1>
-        <p>Это тестовое веб-приложение для лабораторной работы</p>
+        <h1> Docker Compose Laboratory Work #2</h1>
+        <p>This is a test web application for Docker Compose laboratory work</p>
         
         <div class="status info">
-            <strong>Статус:</strong> Приложение запущено в Docker контейнере
+            <strong>Status:</strong> Application is running in Docker container
         </div>
         
         <div class="status success">
-            <strong>База данных:</strong> PostgreSQL подключена и работает
+            <strong>Database:</strong> PostgreSQL is connected and working
+        </div>
+
+        <div class="status warning">
+            <strong>Containers:</strong> Web server + Database in isolated network
         </div>
         
-        <h2>Информация о системе:</h2>
+        <h2>System Information:</h2>
         <ul>
-            <li>Веб-сервер: Nginx</li>
-            <li>База данных: PostgreSQL</li>
-            <li>Сеть: Docker Compose network</li>
-            <li>Данные: Persistent volumes</li>
+            <li>Web Server: Nginx</li>
+            <li>Database: PostgreSQL 15</li>
+            <li>Network: Docker Compose custom network</li>
+            <li>Data Storage: Persistent volumes</li>
+            <li>Web Port: 8080 (host) - 80 (container)</li>
+            <li>DB Port: 5432 (host) - 5432 (container)</li>
+        </ul>
+
+        <h2>Technology Stack:</h2>
+        <ul>
+            <li>Docker Compose for multi-container setup</li>
+            <li>Environment variables for configuration</li>
+            <li>Named volumes for data persistence</li>
+            <li>Custom networks for container communication</li>
         </ul>
         
         <footer>
-            <p>Студент: [Ваше Имя] | Группа: KT-31-22</p>
+            <p>Student: [Bulbarova Anna] | Group: KT-31-22 | Docker Lab #2</p>
         </footer>
     </div>
 </body>

@@ -1,8 +1,13 @@
-# Используем легкий образ nginx на базе Alpine Linux
-FROM nginx:alpine
+# --- Стадия сборки (build) ---
+FROM nginx:alpine AS build
 
-# Копируем все файлы нашего сайта в папку nginx
+# Копируем файлы сайта
 COPY . /usr/share/nginx/html
 
-# Сообщаем что контейнер использует порт 80
+# --- Стадия выполнения (runtime) ---  
+FROM nginx:alpine
+
+# Копируем только готовые файлы из стадии build
+COPY --from=build /usr/share/nginx/html /usr/share/nginx/html
+
 EXPOSE 80
